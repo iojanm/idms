@@ -3,7 +3,7 @@
  <!-- By default, we assume all tools to be on the $PATH -->
  <property name="pdepend" value="pdepend"/>
  <property name="phpcpd"  value="phpcpd"/>
- <property name="phpcs"   value="${basedir}/vendor/bin/phpcs"/>
+ <property name="phpcs"   value="${basedir}/build/tools/phpcs"/>
  <property name="phpdox"  value="phpdox"/>
  <property name="phploc"  value="phploc"/>
  <property name="phpmd"   value="phpmd"/>
