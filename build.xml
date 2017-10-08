@@ -40,7 +40,7 @@
          description="Performs a lint check and runs the tests (without generating code coverage reports)"/>
 
  <target name="static-analysis"
-         depends="lint,phploc-ci,pdepend,phpmd-ci,phpcs-ci,phpcpd-ci"
+         depends="lint,pdepend,phpmd-ci,phpcs-ci,phpcpd-ci"
          description="Performs static analysis" />
 
  <!-- Adjust the threadCount attribute's value to the number of CPUs -->
@@ -107,6 +107,7 @@
   <exec executable="${phploc}" taskname="phploc">
    <arg value="--count-tests" />
    <arg path="${basedir}/src" />
+   <arg path="${basedir}/tests" />
   </exec>
 
   <property name="phploc.done" value="true"/>
@@ -123,6 +124,7 @@
    <arg value="--log-xml" />
    <arg path="${basedir}/build/logs/phploc.xml" />
    <arg path="${basedir}/src" />
+   <arg path="${basedir}/tests" />
   </exec>
 
   <property name="phploc.done" value="true"/>
